@@ -212,7 +212,7 @@ module Ancestry
           node.without_ancestry_callbacks do
             node.update_attribute :ancestor_ids, ancestor_ids
           end
-          build_ancestry_from_parent_ids! column, node.id, ancestor_ids + [node.id]
+          build_ancestry_from_parent_ids! column, node.address, ancestor_ids + [node.id]
         end
       end
     end
